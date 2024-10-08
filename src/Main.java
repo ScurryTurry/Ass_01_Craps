@@ -12,11 +12,11 @@ public class Main {
         int crapsRoll, die1, die2, roll2;
 
         System.out.println("Welcome to Craps!\nThe rules are simple:");
-        System.out.println("1. Roll Two Dice.\n2. If the sum is 2,3, or 12; You got craps or crapping out and you lose");
+        System.out.println("1. Roll Two Dice.\n2. If the sum is 2,3, or 12; You got craps or crapping out and you lose.");
         System.out.println("3. If the sum is 7 or 11 it is a natural and you win!");
-        System.out.println("4. For everything else, the sum becomes 'the point' and you keep rolling until you roll a 7 and lose or make the point sum and win");
+        System.out.println("4. For everything else, the sum becomes 'the point' and you keep rolling until you roll a 7 and lose or make the point sum and win!");
         while (!done) {
-            System.out.println("Time to Roll!");
+            System.out.println("\nTime to Roll!");
             System.out.print("Press R to roll or Q to quit: ");
             playGame = in.nextLine();
             if (playGame.equalsIgnoreCase("Q")) {
@@ -63,9 +63,6 @@ public class Main {
                         }
                     }
                 }
-            } else {
-                System.out.println("Invalid input: " + playGame + "\nPlease select [R/Q]");
-            }
             do {
                 System.out.println("Would you like to play again? [Y/N]: ");
                 continueYN = in.nextLine();
@@ -77,6 +74,9 @@ public class Main {
                     System.out.println("Invalid input: " + continueYN + "\nPlease select [Y/N]");
                 }
             } while (!continueYN.equalsIgnoreCase("Y") && !continueYN.equalsIgnoreCase("N"));
+            } else {
+                System.out.println("Invalid input: " + playGame + "\nPlease select [R/Q]");
+            }
         }
     }
 }
