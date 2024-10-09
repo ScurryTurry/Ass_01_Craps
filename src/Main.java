@@ -10,7 +10,7 @@ public class Main {
         String playGame = "";
         boolean done = false;
         int crapsRoll, die1, die2, roll2;
-        double playerBalance = 100.00;
+        double playerBalance = 1000.00;
         double playerBet = 0.0;
 
         System.out.println("Welcome to Craps!\nThe rules are simple:");
@@ -22,6 +22,7 @@ public class Main {
         while (!done) {
             if (playerBalance <= 0) {
                 System.out.println("You have no money to bet. Game over.");
+                break;
             }
 
             System.out.printf("\nYour current balance is $%.2f. Enter your bet: $", playerBalance);
@@ -30,6 +31,7 @@ public class Main {
 
             if (playerBet > playerBalance) {
                 System.out.println("You don't have enough money for that bet. Please bet an amount less than or equal to your balance.");
+                continue;
             }
 
             System.out.print("Press R to roll or Q to quit: ");
@@ -48,7 +50,7 @@ public class Main {
                 } else if (crapsRoll == 7 || crapsRoll == 11) {
                     System.out.printf("\nYou rolled: %d and %d to make %d\n", die1, die2, crapsRoll);
                     System.out.println("Natural! You won.");
-                    playerBalance += (2 * playerBet);
+                    playerBalance += playerBet;
                     done = true;
                 } else {//if (crapsRoll == 4 || crapsRoll == 5 || crapsRoll == 6 || crapsRoll == 8 || crapsRoll == 9 || crapsRoll == 10)
                     System.out.printf("\nYou rolled: %d and %d to make %d\n", die1, die2, crapsRoll);
@@ -66,7 +68,7 @@ public class Main {
                             if (roll2 == crapsRoll) {
                                 System.out.printf("\nYou rolled: %d and %d to make %d\n", die1, die2, roll2);
                                 System.out.println("You made the point sum! You win!");
-                                playerBalance += (2 * playerBet);
+                                playerBalance += playerBet;
                                 continueGame = false;
                             } else if (roll2 == 7) {
                                 System.out.printf("\nYou rolled: %d and %d to make %d\n", die1, die2, roll2);
