@@ -28,19 +28,19 @@ public class Main {
                 die2 = gen.nextInt(6) + 1;
                 crapsRoll = die1 + die2;
                 if (crapsRoll == 2 || crapsRoll == 3 || crapsRoll == 12) {
-                    System.out.printf("You rolled: %d and %d to make %d\n", die1, die2, crapsRoll);
+                    System.out.printf("\nYou rolled: %d and %d to make %d\n", die1, die2, crapsRoll);
                     System.out.println("Craps! You lost.");
                 } else if (crapsRoll == 7 || crapsRoll == 11) {
-                    System.out.printf("You rolled: %d and %d to make %d\n", die1, die2, crapsRoll);
+                    System.out.printf("\nYou rolled: %d and %d to make %d\n", die1, die2, crapsRoll);
                     System.out.println("Natural! You won.");
                     done = true;
                 } else {//if (crapsRoll == 4 || crapsRoll == 5 || crapsRoll == 6 || crapsRoll == 8 || crapsRoll == 9 || crapsRoll == 10)
-                    System.out.printf("You rolled: %d and %d to make %d\n", die1, die2, crapsRoll);
+                    System.out.printf("\nYou rolled: %d and %d to make %d\n", die1, die2, crapsRoll);
                     System.out.printf("The point is: %d\n", crapsRoll);
                     boolean continueGame = true;
 
                     while (continueGame) {
-                        System.out.print("\nPress R to roll again or Q to quit: ");
+                        System.out.print("\nPress R to roll again to match the point or Q to quit: ");
                         nextRound = in.nextLine();
                         if (nextRound.equalsIgnoreCase("R")) {
                             die1 = gen.nextInt(6) + 1;
@@ -57,7 +57,7 @@ public class Main {
                                 continueGame = false;
                             } else {
                                 System.out.printf("\nYou rolled: %d and %d to make %d\n", die1, die2, roll2);
-                                System.out.printf("Keep trying to get the %d\n!", crapsRoll);
+                                System.out.printf("Keep trying to get the %d!\n", crapsRoll);
                             }
                         } else if (nextRound.equalsIgnoreCase("Q")) {
                             continueGame = false;
