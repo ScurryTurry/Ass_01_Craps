@@ -49,11 +49,11 @@ public class Main {
 
                             if (roll2 == crapsRoll) {
                                 System.out.printf("\nYou rolled: %d and %d to make %d\n", die1, die2, roll2);
-                                System.out.println("You made the point sum! You win!");
+                                System.out.println("You made the point! You win!");
                                 continueGame = false;
                             } else if (roll2 == 7) {
                                 System.out.printf("\nYou rolled: %d and %d to make %d\n", die1, die2, roll2);
-                                System.out.println("You lose!");
+                                System.out.println("You rolled a 7. You lose!");
                                 continueGame = false;
                             } else {
                                 System.out.printf("\nYou rolled: %d and %d to make %d\n", die1, die2, roll2);
