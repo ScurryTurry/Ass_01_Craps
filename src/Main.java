@@ -72,7 +72,7 @@ public class Main {
                                 continueGame = false;
                             } else if (roll2 == 7) {
                                 System.out.printf("\nYou rolled: %d and %d to make %d\n", die1, die2, roll2);
-                                System.out.println("You lose!");
+                                System.out.println("You rolled a 7. You lose!");
                                 playerBalance -= playerBet;
                                 continueGame = false;
                             } else {
